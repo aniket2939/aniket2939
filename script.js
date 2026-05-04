@@ -1,47 +1,67 @@
-const navItems = document.querySelectorAll('.nav-item');
-const views = document.querySelectorAll('.view');
+document.addEventListener('DOMContentLoaded', function(){
 
-navItems.forEach(item=>{
-    item.addEventListener('click',function(e){
-        e.preventDefault();
-        navItems.forEach(n=>n.classList.remove('active'));
-        this.classList.add('active');
-        views.forEach(v=>v.classList.remove('active'));
-        document.getElementById(this.dataset.view).classList.add('active');
-    });
-});
-
-// CONTACT MODAL
-const modal=document.getElementById('contactModal');
-document.getElementById('contactBtn').onclick=()=>modal.style.display='flex';
-document.querySelector('.close-modal').onclick=()=>modal.style.display='none';
-window.onclick=(e)=>{if(e.target===modal)modal.style.display='none';}
-
-// TYPING EFFECT
-const text = "ENGINEERING LEAD • BACKEND ARCHITECT • CLOUD SYSTEMS";
-let idx = 0;
-function typeWriter(){
-    if(idx < text.length){
-        document.getElementById('typing').innerHTML += text.charAt(idx);
-        idx++;
-        setTimeout(typeWriter,70);
+    // TYPING EFFECT
+    const text = 'ENGINEERING LEAD • BACKEND ARCHITECT • CLOUD SYSTEMS';
+    let i = 0;
+    function typing(){
+        if(i < text.length){
+            document.getElementById('typing').innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, 65);
+        }
     }
-}
-window.onload = typeWriter;
+    typing();
 
-// CARD REVEAL ON SCROLL
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = 'translateY(0)';
+    // CONTACT MODAL
+    const modal = document.getElementById('contactModal');
+    const btn = document.getElementById('contactBtn');
+    const close = document.querySelector('.close');
+
+    btn.addEventListener('click', ()=> modal.style.display = 'flex');
+    close.addEventListener('click', ()=> modal.style.display = 'none');
+    window.addEventListener('click', (e)=>{
+        if(e.target === modal){
+            modal.style.display = 'none';
         }
     });
-},{threshold:0.1});
 
-document.querySelectorAll('.card,.stack-item,.bento-card').forEach(el=>{
-    el.style.opacity = 0;
-    el.style.transform = 'translateY(40px)';
-    el.style.transition = 'all .7s ease';
-    observer.observe(el);
+    // SCROLL ACTIVE NAV
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.navbar a');
+
+    window.addEventListener('scroll', ()=>{
+        let current = '';
+        sections.forEach(section=>{
+            const top = window.scrollY;
+            const offset = section.offsetTop - 200;
+            const height = section.offsetHeight;
+            if(top >= offset && top < offset + height){
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link=>{
+            link.classList.remove('active');
+            if(link.getAttribute('href') === '#' + current){
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // REVEAL ANIMATION
+    const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    },{threshold:0.15});
+
+    document.querySelectorAll('.timeline-card,.skill-card,.award-card,.cert-card,.kpi').forEach(el=>{
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(40px)';
+        el.style.transition = 'all .7s ease';
+        observer.observe(el);
+    });
 });
