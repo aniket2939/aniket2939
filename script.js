@@ -1,4 +1,3 @@
-// NAVIGATION SWITCH
 const navItems = document.querySelectorAll('.nav-item');
 const views = document.querySelectorAll('.view');
 
