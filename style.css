@@ -90,17 +90,6 @@ nav {
 h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
 .accent { color: var(--accent); }
 
-.status-pill {
-    background: rgba(56, 189, 248, 0.1);
-    color: var(--accent);
-    padding: 6px 16px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
 .main-logos { 
     display: flex; 
     gap: 30px; 
