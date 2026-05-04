@@ -1,34 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('.tab-link');
-    const sections = document.querySelectorAll('.tab-content');
+    const navItems = document.querySelectorAll('.nav-item');
+    const views = document.querySelectorAll('.view');
 
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
             e.preventDefault();
-            const target = link.getAttribute('data-target');
-            
-            // Toggle Classes
-            links.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-            
-            sections.forEach(s => s.classList.remove('active'));
-            const activeSection = document.getElementById(target);
-            activeSection.classList.add('active');
-            
-            // Reset scroll position for the new section
-            activeSection.scrollTop = 0;
+            const targetView = item.getAttribute('data-view');
+
+            // 1. Update Navigation UI
+            navItems.forEach(nav => nav.classList.remove('active'));
+            item.classList.add('active');
+
+            // 2. Switch HTML View
+            views.forEach(view => {
+                view.classList.remove('active');
+                if (view.id === targetView) {
+                    view.classList.add('active');
+                }
+            });
         });
     });
 
     // Modal Control
     const modal = document.getElementById("contactModal");
-    const openBtn = document.getElementById("openModal");
-    const closeBtn = document.querySelector(".close-button");
+    const btn = document.getElementById("contactBtn");
+    const close = document.querySelector(".close-modal");
 
-    openBtn.onclick = () => modal.style.display = "block";
-    closeBtn.onclick = () => modal.style.display = "none";
-    
-    window.onclick = (event) => {
-        if (event.target == modal) modal.style.display = "none";
-    }
+    btn.onclick = () => modal.style.display = "block";
+    close.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
 });
