@@ -65,3 +65,12 @@ document.addEventListener('DOMContentLoaded', function(){
         observer.observe(el);
     });
 });
+
+const careerStart = new Date(2017, 7, 1); // August = month index 7
+const today = new Date();
+
+const diffTime = today - careerStart;
+const diffDays = diffTime / (1000 * 60 * 60 * 24);
+const diffYears = (diffDays / 365.25).toFixed(1);
+
+document.getElementById("expYears").innerText = diffYears + "+";

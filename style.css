@@ -36,4 +36,12 @@ h2{font-size:42px;margin-bottom:40px;color:#00f5d4}
 .modal-box{background:#0b1220;padding:40px;border-radius:18px;min-width:360px;border:1px solid rgba(255,255,255,.08);text-align:center}
 .modal-box a,.modal-box div{display:block;color:#fff;margin:16px 0;text-decoration:none}
 .close{float:right;font-size:28px;cursor:pointer;color:#00f5d4}
+.hero-icons i,
+.skill-card i{
+    color:#00f5d4 !important;
+    filter: drop-shadow(0 0 8px rgba(0,245,212,.25));
+}
+.hero-icons i{
+    opacity:0.9;
+}
 @media(max-width:900px){.kpi-row{grid-template-columns:repeat(2,1fr)}#typing{font-size:38px}.section{padding:80px 25px}.navbar{padding:20px 20px;flex-direction:column;gap:15px}.navbar ul{flex-wrap:wrap;justify-content:center}}
