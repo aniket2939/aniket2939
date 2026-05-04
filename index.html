@@ -3,106 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniket Mane | Engineering Lead</title>
+    <title>Aniket Mane | Engineering Lead & Architect</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cloudflare.com">
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <div class="logo">AM<span>.</span></div>
+        <div class="logo">ANIKET<span>MANE</span></div>
         <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#honors">Honors</a></li>
+            <li><a href="#skills">Stack</a></li>
+            <li><a href="#honors">Recognition</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <header id="hero">
         <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Aniket Mane</span></h1>
-            <h2>Software Engineering Lead</h2>
-            <p>Specializing in Golang, Distributed Systems, and Cloud Infrastructure.</p>
+            <span class="badge">Available for Strategic Leadership</span>
+            <h1>Architecting <span class="highlight">Scalable</span> Distributed Systems.</h1>
+            <p class="hero-subtext">
+                Engineering Lead with 7+ years of experience specializing in <strong>Golang ecosystem</strong>, 
+                Cloud-Native architecture, and Fintech scalability. Currently spearheading Asia market 
+                expansion for <strong>Zendesk Sell</strong> at Persistent Systems.
+            </p>
             <div class="hero-btns">
-                <a href="#experience" class="btn primary">View My Work</a>
-                <a href="mailto:aniket2939@gmail.com" class="btn secondary">Get In Touch</a>
+                <a href="#experience" class="btn primary">Detailed Case Studies</a>
+                <a href="mailto:aniket2939@gmail.com" class="btn secondary">Download Resume</a>
             </div>
         </div>
     </header>
 
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Leadership Philosophy</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Technical Excellence</h3>
+                    <p>I believe in "Clean Code" not just as a standard, but as a business necessity. My focus is on TDD/BDD, Microservices patterns, and robust CI/CD pipelines that empower teams to deploy with confidence.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Scalable Thinking</h3>
+                    <p>From managing high-performance gRPC communication to optimizing MySQL/BoltDB layers, I design systems that handle millions of requests while maintaining 99.9% uptime.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Mentorship</h3>
+                    <p>As an Engineering Lead, my success is measured by the growth of my team. I prioritize code reviews, POC development, and fostering an environment of continuous learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="experience">
-        <h2 class="section-title">Professional Experience</h2>
-        <div class="timeline">
-            <div class="exp-item">
-                <div class="exp-header">
-                    <h3>Persistent Systems Pvt Ltd</h3>
-                    <span>Jan 2024 - Present</span>
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="detailed-timeline">
+            <!-- Persistent Systems -->
+            <div class="work-block">
+                <div class="work-info">
+                    <h3>Engineering Lead</h3>
+                    <span class="company">Persistent Systems Pvt Ltd</span>
+                    <span class="duration">JAN 2024 — PRESENT</span>
                 </div>
-                <h4>Engineering Lead</h4>
-                <p>Leading the design and deployment of software solutions for <strong>Zendesk Sell</strong>. Expert in Golang, AWS, Kubernetes, and Terraform. Focus on POCs and mentoring junior engineers.</p>
+                <div class="work-desc">
+                    <p><strong>Project: Zendesk Sell (Sales CRM)</strong></p>
+                    <p>Leading the strategic expansion of Zendesk’s sales CRM into the Asian market. This involves localizing complex pipelines and ensuring high-availability across global regions.</p>
+                    <ul>
+                        <li>Designing and implementing microservices using <strong>Golang</strong> and <strong>AWS</strong>.</li>
+                        <li>Automating infrastructure using <strong>Terraform</strong> and <strong>Jsonnet</strong> within Kubernetes environments.</li>
+                        <li>Establishing boilerplates and POCs that reduced feature development time by 30% for incoming engineers.</li>
+                        <li>Actively mentoring junior talent and leading cross-functional design sprints.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="exp-item">
-                <div class="exp-header">
-                    <h3>Ayoconnect Pvt Ltd</h3>
-                    <span>Dec 2020 - Jan 2024</span>
+
+            <!-- Ayoconnect -->
+            <div class="work-block">
+                <div class="work-info">
+                    <h3>Engineering Lead</h3>
+                    <span class="company">Ayoconnect Pvt Ltd (Ayopop)</span>
+                    <span class="duration">DEC 2020 — JAN 2024</span>
                 </div>
-                <h4>Engineering Lead</h4>
-                <p>Architected high-performance fintech solutions for <strong>Ayopop</strong>. Scaled billing and payment platforms using gRPC, MySQL, and GCP infrastructure.</p>
-            </div>
-            <div class="exp-item">
-                <div class="exp-header">
-                    <h3>FloraTecho Solutions</h3>
-                    <span>Nov 2017 - Dec 2020</span>
+                <div class="work-desc">
+                    <p><strong>Project: Fintech Payment Gateway</strong></p>
+                    <p>Architected the core engine for Indonesia's leading bill payment platform, managing everything from mobile top-ups to national health insurance payments.</p>
+                    <ul>
+                        <li>Successfully migrated legacy services to a <strong>gRPC-based microservices architecture</strong> on GCP.</li>
+                        <li>Optimized data persistence layers using a hybrid of <strong>MySQL</strong> and <strong>BoltDB</strong> for high-speed transactions.</li>
+                        <li>Managed full SDLC for Open API integrations, enabling third-party partners to consume fintech services securely.</li>
+                    </ul>
                 </div>
-                <h4>Software Developer</h4>
-                <p>Developed social media and meeting platforms (Cut2it & Videomine) using Golang, React.js, and AWS.</p>
             </div>
         </div>
     </section>
 
     <section id="skills">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card"><i class="fas fa-code"></i><br>Golang, Node.js, gRPC, REST</div>
-            <div class="skill-card"><i class="fas fa-cloud"></i><br>AWS, GCP, Terraform, Jsonnet</div>
-            <div class="skill-card"><i class="fas fa-cubes"></i><br>Docker, Kubernetes, GitActions</div>
-            <div class="skill-card"><i class="fas fa-database"></i><br>MySQL, BoltDB, Redis, RabbitMQ</div>
+        <h2 class="section-title">The Tech Stack</h2>
+        <div class="skills-verbose-grid">
+            <div class="skill-category">
+                <h4>Languages & Frameworks</h4>
+                <p>Golang (Expert), Node.js, JavaScript, React.js, HTML5/CSS3, gRPC, REST, RPC.</p>
+            </div>
+            <div class="skill-category">
+                <h4>Cloud & Infrastructure</h4>
+                <p>AWS, Google Cloud Platform (GCP), Terraform, Kubernetes, Docker, Jsonnet.</p>
+            </div>
+            <div class="skill-category">
+                <h4>Observability & DevOps</h4>
+                <p>Datadog, GitHub Actions, CI/CD Pipelines, Microservices Orchestration.</p>
+            </div>
+            <div class="skill-category">
+                <h4>Databases & Messaging</h4>
+                <p>MySQL, BoltDB, Redis, RabbitMQ, PostgreSQL.</p>
+            </div>
         </div>
     </section>
 
     <section id="honors">
-        <h2 class="section-title">Awards & Certifications</h2>
-        <div class="honors-container">
-            <div class="honors-column">
-                <h3><i class="fas fa-trophy"></i> Awards</h3>
-                <ul class="honors-list">
-                    <li><strong>Top Talent 2025</strong> – Persistent Systems</li>
-                    <li><strong>Best Performer Q1</strong> – Persistent Systems</li>
-                    <li><strong>Bravo Award</strong> – Incident Resolution, Persistent</li>
-                    <li><strong>Top Talent (2 Years)</strong> – Ayoconnect</li>
+        <h2 class="section-title">Recognition & Education</h2>
+        <div class="honors-flex">
+            <div class="honors-card">
+                <h3>Awards</h3>
+                <ul>
+                    <li>🏆 <strong>Top Talent 2025</strong> (Persistent Systems)</li>
+                    <li>🏆 <strong>Best Performer Q1</strong> (Persistent Systems)</li>
+                    <li>🏆 <strong>Bravo Award</strong> for Critical Incident Resolution</li>
+                    <li>🏆 <strong>Top Talent</strong> (2 Consecutive Years @ Ayoconnect)</li>
                 </ul>
             </div>
-            <div class="honors-column">
-                <h3><i class="fas fa-certificate"></i> Certifications</h3>
-                <ul class="honors-list">
-                    <li><strong>PDEA Certified</strong> – Backend Engineer (Golang L-IV)</li>
-                    <li><strong>Mastery</strong> – Docker & Kubernetes</li>
-                    <li><strong>Mastery</strong> – gRPC Framework</li>
-                </ul>
+            <div class="honors-card">
+                <h3>Education</h3>
+                <p><strong>B.E. in Information Technology</strong><br>AISSMS IOIT, Pune (2010 - 2015)</p>
+                <p style="margin-top: 15px;"><strong>Languages</strong><br>English, Marathi, Hindi, Gujarati</p>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <h2>Let's Connect</h2>
-        <div class="social-links">
-            <a href="mailto:aniket2939@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+        <h2>Start a Conversation</h2>
+        <p>I am always open to discussing system architecture or leadership opportunities.</p>
+        <div class="contact-details">
+            <a href="mailto:aniket2939@gmail.com">aniket2939@gmail.com</a>
+            <p>+91 9545984896</p>
+            <p>Pune, Maharashtra, India</p>
         </div>
-        <p>Pune, India | (+91) 9545984896</p>
-        <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.6;">© 2024 Aniket Mane. Built with AI.</p>
+        <div class="footer-bottom">
+            <p>© 2024 Aniket Mane | Designed for High-Performance Engineering</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

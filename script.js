@@ -1,32 +1,29 @@
-// Simple Fade-in animation on scroll
-const observerOptions = {
-    threshold: 0.1
-};
+// Fade in elements on scroll
+const faders = document.querySelectorAll('.about-card, .work-block, .skill-category');
+const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
 
-const observer = new IntersectionObserver((entries) => {
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
     });
-}, observerOptions);
+}, appearOptions);
 
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'all 0.6s ease-out';
-    observer.observe(section);
+faders.forEach(fader => {
+    fader.style.opacity = "0";
+    fader.style.transform = "translateY(30px)";
+    fader.style.transition = "all 0.8s ease-out";
+    appearOnScroll.observe(fader);
 });
 
-// Navbar background change on scroll
+// Implementation of the observer class injection
 window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.padding = '15px 10%';
-        nav.style.boxShadow = '0 10px 30px rgba(0,0,0,0.5)';
-    } else {
-        nav.style.padding = '20px 10%';
-        nav.style.boxShadow = 'none';
-    }
+    faders.forEach(fader => {
+        const top = fader.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100) {
+            fader.style.opacity = "1";
+            fader.style.transform = "translateY(0)";
+        }
+    });
 });
