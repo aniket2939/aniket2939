@@ -1,29 +1,17 @@
-// Fade in elements on scroll
-const faders = document.querySelectorAll('.about-card, .work-block, .skill-category');
-const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-
-const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+// Fade-in animations for all sections
+const observerOptions = { threshold: 0.1 };
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('appear');
-        appearOnScroll.unobserve(entry.target);
-    });
-}, appearOptions);
-
-faders.forEach(fader => {
-    fader.style.opacity = "0";
-    fader.style.transform = "translateY(30px)";
-    fader.style.transition = "all 0.8s ease-out";
-    appearOnScroll.observe(fader);
-});
-
-// Implementation of the observer class injection
-window.addEventListener('scroll', () => {
-    faders.forEach(fader => {
-        const top = fader.getBoundingClientRect().top;
-        if(top < window.innerHeight - 100) {
-            fader.style.opacity = "1";
-            fader.style.transform = "translateY(0)";
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
         }
     });
+}, observerOptions);
+
+document.querySelectorAll('section, .work-block, .honors-card').forEach(el => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(20px)";
+    el.style.transition = "all 0.7s ease-out";
+    observer.observe(el);
 });
