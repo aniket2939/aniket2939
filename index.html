@@ -3,138 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniket Mane | Engineering Lead & Architect</title>
-    
-    <!-- NO CACHING META TAGS -->
+    <title>Aniket Mane | Engineering Lead</title>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-
+    
+    <!-- Libraries -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://jsdelivr.net">
     <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
     <nav>
         <div class="logo">ANIKET<span>MANE</span></div>
         <ul class="nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Stack</a></li>
-            <li><a href="#honors">Recognition</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="tab-link active" data-target="hero">Home</a></li>
+            <li><a href="#" class="tab-link" data-target="experience">Experience</a></li>
+            <li><a href="#" class="tab-link" data-target="skills">Stack</a></li>
+            <li><a href="#" class="tab-link" data-target="honors">Recognition</a></li>
+            <li><button id="openModal" class="btn-nav">Contact</button></li>
         </ul>
     </nav>
 
-    <header id="hero">
-        <div class="hero-content">
-            <span class="badge">Engineering Lead</span>
-            <h1>Architecting <span class="highlight">Scalable</span> Systems.</h1>
-            <p class="hero-subtext">
-                7+ years experience specializing in <strong>Golang</strong>, Distributed Systems, and Cloud-Native infrastructure. 
-                Currently leading Asia market expansion for <strong>Zendesk Sell</strong> at Persistent Systems.
-            </p>
-            <div class="hero-btns">
-                <a href="#experience" class="btn primary">View Experience</a>
-                <a href="mailto:aniket2939@gmail.com" class="btn secondary">Get In Touch</a>
+    <main id="content-area">
+        <!-- HOME SECTION -->
+        <section id="hero" class="tab-content active">
+            <div class="hero-content">
+                <span class="badge"><i class="fas fa-terminal"></i> Engineering Lead</span>
+                <h1>Architecting <span class="highlight">High-Performance</span> Systems.</h1>
+                <p class="hero-subtext">Software Engineering Lead with a decade of expertise in <strong>Golang</strong>, <strong>Kubernetes</strong>, and <strong>Distributed Architecture</strong>. Currently leading the Asia market expansion for <strong>Zendesk Sell</strong>.</p>
+                <div class="hero-logos">
+                    <i class="devicon-go-original-wordmark colored" title="Golang"></i>
+                    <i class="devicon-kubernetes-plain colored" title="Kubernetes"></i>
+                    <i class="devicon-docker-plain colored" title="Docker"></i>
+                    <i class="devicon-terraform-plain-wordmark colored" title="Terraform"></i>
+                    <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
+                </div>
             </div>
-        </div>
-    </header>
+        </section>
 
-    <section id="experience">
-        <h2 class="section-title">Professional Journey</h2>
-        <div class="detailed-timeline">
-            <div class="work-block">
-                <div class="work-info">
-                    <h3>Engineering Lead</h3>
-                    <span class="company">Persistent Systems Pvt Ltd</span>
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="tab-content">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <!-- PERSISTENT -->
+            <div class="work-card">
+                <div class="work-header">
+                    <div class="comp-info">
+                        <h3>Engineering Lead</h3>
+                        <span class="company">Persistent Systems Pvt Ltd, Pune</span>
+                    </div>
                     <span class="duration">JAN 2024 — PRESENT</span>
                 </div>
-                <div class="work-desc">
-                    <p><strong>Zendesk Sell Expansion:</strong> Leading the design, implementation, and deployment of complex services for the Asian market.</p>
+                <div class="project-box">
+                    <h4><i class="fas fa-project-diagram"></i> Project: Zendesk Sell (Sales CRM)</h4>
+                    <p>Zendesk Sell empowers sales teams to manage leads and customer relationships. My role is spearheading the market expansion into Asia, localizing the CRM infrastructure.</p>
                     <ul>
-                        <li>Orchestrating microservices using <strong>Golang, AWS, and Kubernetes</strong>.</li>
-                        <li>Automating infrastructure with <strong>Terraform and Jsonnet</strong>.</li>
-                        <li>Reduced onboarding time by 30% through standardized boilerplates and POCs.</li>
+                        <li>Design and deployment of complex software solutions using <strong>Golang, AWS, and Kubernetes</strong>.</li>
+                        <li>Automating infrastructure orchestration via <strong>Terraform, Jsonnet, and GitHub Actions</strong>.</li>
+                        <li>Developing <strong>boilerplates and POCs</strong> to accelerate team delivery and standardize service creation.</li>
+                        <li>Leading code reviews and mentoring junior engineers to foster a high-performance culture.</li>
                     </ul>
+                    <div class="tech-stack-tags">
+                        <span>Golang</span><span>AWS</span><span>K8s</span><span>Terraform</span><span>Jsonnet</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="work-block">
-                <div class="work-info">
-                    <h3>Engineering Lead</h3>
-                    <span class="company">Ayoconnect Pvt Ltd (Ayopop)</span>
+            <!-- AYOCONNECT -->
+            <div class="work-card">
+                <div class="work-header">
+                    <div class="comp-info">
+                        <h3>Engineering Lead</h3>
+                        <span class="company">Ayoconnect Pvt Ltd, Pune</span>
+                    </div>
                     <span class="duration">DEC 2020 — JAN 2024</span>
                 </div>
-                <div class="work-desc">
-                    <p><strong>Fintech Scalability:</strong> Architected high-performance billing and payment platforms for millions of users.</p>
+                <div class="project-box">
+                    <h4><i class="fas fa-wallet"></i> Project: Ayopop (Fintech Ecosystem)</h4>
+                    <p>Ayopop is an all-in-one bill payment platform in Indonesia. It handles millions of transactions for mobile top-ups, electricity, and health insurance (BPJS).</p>
                     <ul>
-                        <li>Migrated legacy systems to <strong>gRPC microservices</strong> on GCP.</li>
-                        <li>Optimized data layers using <strong>MySQL and BoltDB</strong> for high-speed transactions.</li>
+                        <li>Implemented scalable solutions using <strong>Node.js, Golang, and gRPC</strong> on <strong>GCP</strong>.</li>
+                        <li>Designed high-concurrency payment APIs and integrated third-party vendors for e-money (GO-PAY, OVO).</li>
+                        <li>Optimized database performance utilizing <strong>MySQL</strong> for core transactions and <strong>BoltDB</strong> for local caching.</li>
+                    </ul>
+                    <div class="tech-stack-tags">
+                        <span>gRPC</span><span>GCP</span><span>MySQL</span><span>BoltDB</span><span>Microservices</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FLORATECHO -->
+            <div class="work-card">
+                <div class="work-header">
+                    <div class="comp-info">
+                        <h3>Software Developer</h3>
+                        <span class="company">FloraTecho Solutions Pvt Ltd</span>
+                    </div>
+                    <span class="duration">NOV 2017 — DEC 2020</span>
+                </div>
+                <div class="project-box">
+                    <h4><i class="fas fa-video"></i> Project: Cut2it & Videomine</h4>
+                    <p>A unique platform blending social media with content editing and online meetings (USA-focused).</p>
+                    <ul>
+                        <li>Built real-time features using <strong>React.js, JavaScript, and Golang</strong>.</li>
+                        <li>Managed media content delivery (video, live streams, blogs) hosted on <strong>AWS</strong>.</li>
+                        <li>Analyzed requirements and proposed backend solutions for elective community building.</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-verbose-grid">
-            <div class="skill-category">
-                <h4>Languages & Frameworks</h4>
-                <p>Golang, Node.js, gRPC, REST, React.js, TDD/BDD.</p>
+        <!-- STACK SECTION -->
+        <section id="skills" class="tab-content">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-box"><i class="devicon-go-original colored"></i><p>Golang (TDD/BDD)</p></div>
+                <div class="skill-box"><i class="devicon-kubernetes-plain colored"></i><p>Kubernetes</p></div>
+                <div class="skill-box"><i class="devicon-docker-plain colored"></i><p>Docker</p></div>
+                <div class="skill-box"><i class="devicon-terraform-plain colored"></i><p>Terraform</p></div>
+                <div class="skill-box"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><p>AWS Cloud</p></div>
+                <div class="skill-box"><i class="devicon-googlecloud-plain colored"></i><p>GCP</p></div>
+                <div class="skill-box"><i class="devicon-mysql-plain colored"></i><p>MySQL / BoltDB</p></div>
+                <div class="skill-box"><i class="fas fa-network-wired"></i><p>gRPC / RPC / REST</p></div>
+                <div class="skill-box"><i class="devicon-github-original colored"></i><p>GitHub Actions</p></div>
             </div>
-            <div class="skill-category">
-                <h4>Cloud & Infrastructure</h4>
-                <p>AWS, GCP, Terraform, Kubernetes, Docker, GitHub Actions.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="honors">
-        <h2 class="section-title">Recognition & Education</h2>
-        <div class="honors-bento-grid">
-            <div class="honors-card award">
-                <div class="card-icon"><i class="fas fa-award"></i></div>
-                <h3>Top Talent 2025</h3>
-                <p>Persistent Systems - Engineering Excellence</p>
-                <span class="card-tag">Leadership</span>
+        <!-- HONORS SECTION -->
+        <section id="honors" class="tab-content">
+            <h2 class="section-title">Awards & Certifications</h2>
+            <div class="bento-grid">
+                <div class="bento-item award">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Top Talent 2025</h3>
+                    <p>Persistent Systems</p>
+                </div>
+                <div class="bento-item cert">
+                    <i class="fas fa-certificate"></i>
+                    <h3>PDEA Backend Lead</h3>
+                    <p>Golang Level-IV Certified</p>
+                </div>
+                <div class="bento-item award">
+                    <i class="fas fa-star"></i>
+                    <h3>Bravo Award</h3>
+                    <p>Persistent Systems - Incident Resolution</p>
+                </div>
+                <div class="bento-item award">
+                    <i class="fas fa-medal"></i>
+                    <h3>Top Talent (2 yrs)</h3>
+                    <p>Ayoconnect Tech</p>
+                </div>
             </div>
-            <div class="honors-card award">
-                <div class="card-icon"><i class="fas fa-bolt"></i></div>
-                <h3>Bravo Award</h3>
-                <p>Critical Incident Resolution for Global Clients</p>
-                <span class="card-tag">Crisis Management</span>
-            </div>
-            <div class="honors-card education">
-                <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-                <h3>B.E. Information Tech</h3>
-                <p>AISSMS IOIT, Pune</p>
-                <p class="edu-date">2010 - 2015</p>
-            </div>
-            <div class="honors-card certs">
-                <div class="card-icon"><i class="fas fa-certificate"></i></div>
-                <h3>Certifications</h3>
-                <ul>
-                    <li>Backend Lead (Golang L-IV)</li>
-                    <li>Docker & Kubernetes Mastery</li>
-                    <li>gRPC Framework Expert</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer id="contact">
-        <h2>Let's Connect</h2>
-        <div class="contact-details">
-            <a href="mailto:aniket2939@gmail.com">aniket2939@gmail.com</a>
-            <p>+91 9545984896 | Pune, Maharashtra, India</p>
+    <!-- CONTACT MODAL -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Let's Talk Shop</h2>
+            <div class="contact-links">
+                <a href="mailto:aniket2939@gmail.com"><i class="fas fa-envelope"></i> aniket2939@gmail.com</a>
+                <a href="tel:+919545984896"><i class="fas fa-phone"></i> +91 9545984896</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+            </div>
         </div>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-        </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
