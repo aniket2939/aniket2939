@@ -74,3 +74,4 @@ const diffDays = diffTime / (1000 * 60 * 60 * 24);
 const diffYears = (diffDays / 365.25).toFixed(1);
 
 document.getElementById("expYears").innerText = diffYears + "+";
+document.getElementById("heroExpText").innerText = diffYears + "+";
